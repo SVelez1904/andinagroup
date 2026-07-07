@@ -1,0 +1,77 @@
+:root {
+  --stone-950: #14120f;
+  --stone-800: #2a251e;
+  --paper: #f7f2e7;
+  --paper-dim: #efe8d8;
+  --gold-700: #93691f;
+  --gold-600: #b9862e;
+  --gold-300: #e4c48a;
+  --ink: #221f1a;
+  --ink-soft: #5a5346;
+  --line: #ddd2b4;
+  --line-dark: #423b2d;
+
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  color-scheme: light;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-600);
+  outline-offset: 3px;
+}

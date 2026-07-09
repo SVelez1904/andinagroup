@@ -5,8 +5,8 @@ import './App.css';
 // ---------------------------------------------------------------
 // Reemplaza estos dos links por los reales cuando los tengas listos.
 // ---------------------------------------------------------------
-const BOOKING_URL = 'https://calendar.app.google/TU-LINK-DE-AGENDAMIENTO';
-const FORM_URL = 'https://forms.gle/TU-LINK-DE-FORMULARIO';
+const BOOKING_URL = 'https://calendar.app.google/RnHsZPghqCm6yDuR7';
+const FORM_URL = 'https://forms.gle/y9mZVsCR7hQV9KDVA';
 
 function MountainDivider({ tone = 'gold' }) {
   return (

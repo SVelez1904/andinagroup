@@ -395,3 +395,33 @@
     order: 0;
   }
 }
+
+/* BOTÓN DE WHATSAPP INTEGRADO */
+.btn--whatsapp {
+  background: transparent;
+  color: #f7f2e7 !important;
+  border: 1px solid #3c4f6b; /* Mismo borde sutil que los otros botones ghost */
+  gap: 10px;
+  
+  /* Forzamos a que herede exactamente la misma altura y padding que tus botones grandes */
+  padding: 15px 30px !important; 
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 999px !important;
+}
+
+/* Efecto al pasar el mouse */
+.btn--whatsapp:hover {
+  border-color: #25D366; /* El borde se ilumina sutilmente con el verde de WA */
+  color: #25D366 !important; /* El texto e icono cambian al verde de forma elegante */
+  background: rgba(37, 211, 102, 0.05); /* Un destello de fondo casi imperceptible */
+  transform: translateY(-1px);
+}
+
+/* El icono SVG se adapta al tamaño del texto */
+.btn__icon-wa {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}

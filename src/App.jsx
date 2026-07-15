@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './assets/logo.png';
 import './App.css';
+import WhatsAppButton from './WhatsAppBtn';
 
 // ---------------------------------------------------------------
 // Reemplaza estos dos links por los reales cuando los tengas listos.
@@ -67,6 +68,7 @@ function App() {
               <a className="btn btn--ghost btn--lg" href={FORM_URL} target="_blank" rel="noreferrer">
                 Postular mi propiedad
               </a>
+              <WhatsAppButton phoneNumber="56912345678" label="Asesorarme por WhatsApp" />
             </div>
           </div>
           <MountainDivider tone="gold" />

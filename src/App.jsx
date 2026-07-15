@@ -68,7 +68,7 @@ function App() {
               <a className="btn btn--ghost btn--lg" href={FORM_URL} target="_blank" rel="noreferrer">
                 Postular mi propiedad
               </a>
-              <WhatsAppButton phoneNumber="56912345678" label="Asesorarme por WhatsApp" />
+              <WhatsAppButton phoneNumber="56983076392" label="Asesorarme por WhatsApp" />
             </div>
           </div>
           <MountainDivider tone="gold" />

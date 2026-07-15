@@ -135,7 +135,7 @@ function App() {
           </div>
           <div className="site-footer__meta">
             <p>Santiago, Chile</p>
-            <p>contacto@andinagroup.cl</p>
+            <p>leticia@andinagroup.cl</p>
           </div>
           <p className="site-footer__copy">
             &copy; {new Date().getFullYear()} Andina Group. Todos los derechos reservados.

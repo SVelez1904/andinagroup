@@ -1,5 +1,8 @@
 .page {
   overflow-x: hidden;
+  background-color: #0f1420;
+  color: #f7f2e7; /* Un tono crema claro para contraste suave */
+  min-height: 100vh;
 }
 
 .wrap {
@@ -12,8 +15,8 @@
   position: absolute;
   left: -999px;
   top: 0;
-  background: var(--ink);
-  color: var(--paper);
+  background: #f7f2e7;
+  color: #0f1420;
   padding: 10px 16px;
   z-index: 100;
 }
@@ -28,9 +31,9 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(247, 242, 231, 0.9);
+  background: rgba(15, 20, 32, 0.95); /* Fondo oscuro con transparencia sutil */
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #1f2d42;
 }
 
 .site-header__row {
@@ -45,13 +48,15 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: var(--ink);
+  color: #f7f2e7;
 }
 
 .brand__mark {
   height: 30px;
   width: auto;
   object-fit: contain;
+  /* Si tu logo negro no se ve bien en fondo oscuro, esto lo vuelve color crema/blanco */
+  filter: brightness(0) invert(1) sepia(1) saturate(100) hue-rotate(320deg); 
 }
 
 .brand__mark--sm {
@@ -63,6 +68,7 @@
   font-weight: 600;
   font-size: 19px;
   letter-spacing: -0.01em;
+  color: #f7f2e7;
 }
 
 .site-nav {
@@ -73,14 +79,14 @@
 
 .site-nav a:not(.btn) {
   text-decoration: none;
-  color: var(--ink-soft);
+  color: #b0bac5; /* Gris suave para links secundarios */
   font-size: 15px;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .site-nav a:not(.btn):hover {
-  color: var(--ink);
+  color: #f7f2e7;
 }
 
 @media (max-width: 640px) {
@@ -112,25 +118,26 @@
 }
 
 .btn--primary {
-  background: var(--ink);
-  color: var(--paper);
-  border: 1px solid var(--ink);
+  background: #f7f2e7; /* Botón principal ahora es claro sobre fondo oscuro */
+  color: #0f1420;
+  border: 1px solid #f7f2e7;
 }
 
 .btn--primary:hover {
-  background: var(--gold-700);
-  border-color: var(--gold-700);
+  background: var(--gold-600);
+  border-color: var(--gold-600);
+  color: #0f1420;
   transform: translateY(-1px);
 }
 
 .btn--ghost {
   background: transparent;
-  color: var(--ink);
-  border: 1px solid var(--line-dark);
+  color: #f7f2e7;
+  border: 1px solid #3c4f6b;
 }
 
 .btn--ghost:hover {
-  border-color: var(--ink);
+  border-color: #f7f2e7;
   transform: translateY(-1px);
 }
 
@@ -138,7 +145,7 @@
 .hero {
   position: relative;
   padding-top: clamp(64px, 10vw, 120px);
-  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-dim) 100%);
+  background: #0f1420; /* Eliminado el gradiente claro */
 }
 
 .hero__inner {
@@ -152,7 +159,7 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--gold-700);
+  color: var(--gold-300); /* Dorado más brillante para fondo oscuro */
   margin-bottom: 18px;
 }
 
@@ -162,13 +169,14 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   max-width: 14ch;
+  color: #f7f2e7;
 }
 
 .hero__lead {
   margin-top: 24px;
   font-size: clamp(16px, 1.6vw, 19px);
   line-height: 1.65;
-  color: var(--ink-soft);
+  color: #b0bac5; /* Texto descriptivo legible */
   max-width: 52ch;
 }
 
@@ -198,7 +206,7 @@
 }
 
 .ridge--gold {
-  background: var(--paper-dim);
+  background: #0f1420; /* El fondo de la transición de montaña ahora es el azul oscuro */
 }
 
 .ridge--paper polyline {
@@ -206,13 +214,13 @@
 }
 
 .ridge--paper {
-  background: var(--stone-950);
+  background: #0f1420;
 }
 
 /* PROCESS */
 .process {
   padding: clamp(56px, 9vw, 100px) 0;
-  background: var(--paper-dim);
+  background: #0f1420; /* Eliminado el fondo claro */
 }
 
 .section-title {
@@ -221,6 +229,7 @@
   letter-spacing: -0.01em;
   max-width: 20ch;
   margin-bottom: 44px;
+  color: #f7f2e7;
 }
 
 .process__list {
@@ -234,8 +243,8 @@
 }
 
 .process__item {
-  background: var(--paper);
-  border: 1px solid var(--line);
+  background: #161f30; /* Tarjeta oscura elegante para los pasos */
+  border: 1px solid #233149;
   border-radius: 14px;
   padding: 28px 26px;
 }
@@ -245,7 +254,7 @@
   font-family: var(--font-display);
   font-size: 15px;
   font-weight: 600;
-  color: var(--gold-600);
+  color: var(--gold-300);
   margin-bottom: 14px;
 }
 
@@ -253,12 +262,13 @@
   font-size: 19px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: #f7f2e7;
 }
 
 .process__item p {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--ink-soft);
+  color: #b0bac5;
 }
 
 @media (max-width: 860px) {
@@ -270,13 +280,13 @@
 /* ACTIONS / CTA FINAL */
 .actions {
   position: relative;
-  background: var(--stone-950);
+  background: #0c101a; /* Un tono sutilmente más oscuro para la sección final */
   padding: clamp(56px, 9vw, 100px) 0 0;
-  color: var(--paper);
+  color: #f7f2e7;
 }
 
 .section-title--light {
-  color: var(--paper);
+  color: #f7f2e7;
 }
 
 .actions__grid {
@@ -290,16 +300,16 @@
   position: relative;
   display: block;
   text-decoration: none;
-  color: var(--paper);
-  background: var(--stone-800);
-  border: 1px solid var(--line-dark);
+  color: #f7f2e7;
+  background: #161f30;
+  border: 1px solid #233149;
   border-radius: 16px;
   padding: 32px 30px 36px;
   transition: border-color 0.2s ease, transform 0.15s ease;
 }
 
 .action-card:hover {
-  border-color: var(--gold-600);
+  border-color: var(--gold-300);
   transform: translateY(-2px);
 }
 
@@ -317,12 +327,12 @@
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: var(--paper);
+  color: #f7f2e7;
 }
 
 .action-card p {
   font-size: 15px;
-  color: #cfc6b3;
+  color: #b0bac5;
   max-width: 32ch;
 }
 
@@ -342,8 +352,8 @@
 
 /* FOOTER */
 .site-footer {
-  background: var(--stone-950);
-  color: #a89f8c;
+  background: #0c101a;
+  color: #b0bac5;
   padding: 28px 0 36px;
 }
 
@@ -353,12 +363,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  border-top: 1px solid var(--line-dark);
+  border-top: 1px solid #233149;
   padding-top: 24px;
 }
 
 .brand--footer .brand__name {
-  color: var(--paper);
+  color: #f7f2e7;
   font-size: 16px;
 }
 
@@ -376,7 +386,7 @@
   font-size: 13px;
   width: 100%;
   order: 3;
-  color: #7d7563;
+  color: #707e94;
 }
 
 @media (min-width: 720px) {

@@ -396,32 +396,47 @@
   }
 }
 
-/* BOTÓN DE WHATSAPP INTEGRADO */
-.btn--whatsapp {
-  background: transparent;
-  color: #f7f2e7 !important;
-  border: 1px solid #3c4f6b; /* Mismo borde sutil que los otros botones ghost */
-  gap: 10px;
-  
-  /* Forzamos a que herede exactamente la misma altura y padding que tus botones grandes */
-  padding: 15px 30px !important; 
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  border-radius: 999px !important;
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px; /* Distancia desde abajo de la pantalla */
+  right: 30px;  /* Distancia desde la derecha */
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #ffffff !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 9999; /* Asegura que flote por encima de todo el contenido */
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Efecto al pasar el mouse */
-.btn--whatsapp:hover {
-  border-color: #25D366; /* El borde se ilumina sutilmente con el verde de WA */
-  color: #25D366 !important; /* El texto e icono cambian al verde de forma elegante */
-  background: rgba(37, 211, 102, 0.05); /* Un destello de fondo casi imperceptible */
-  transform: translateY(-1px);
+/* Efecto Hover */
+.whatsapp-float:hover {
+  background-color: #20ba56; /* Un verde un poco más oscuro al pasar el cursor */
+  transform: scale(1.08) translateY(-2px); /* Se agranda un poquito y sube */
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
 }
 
-/* El icono SVG se adapta al tamaño del texto */
-.btn__icon-wa {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  transition: color 0.2s ease;
+/* Tamaño del Icono dentro del círculo */
+.whatsapp-float__icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Adaptación para pantallas de celulares */
+@media (max-width: 640px) {
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 54px;
+    height: 54px;
+  }
+  .whatsapp-float__icon {
+    width: 28px;
+    height: 28px;
+  }
 }

@@ -7,7 +7,7 @@ import WhatsAppButton from './WhatsAppBtn';
 // Reemplaza estos dos links por los reales cuando los tengas listos.
 // ---------------------------------------------------------------
 const BOOKING_URL = 'https://calendar.app.google/RnHsZPghqCm6yDuR7';
-const FORM_URL = 'https://forms.gle/y9mZVsCR7hQV9KDVA';
+const FORM_URL = 'https://forms.gle/XEZkJndrUcKw1d8c8';
 
 function MountainDivider({ tone = 'gold' }) {
   return (

@@ -6,7 +6,7 @@ import WhatsAppButton from './WhatsAppBtn';
 // ---------------------------------------------------------------
 // Reemplaza estos dos links por los reales cuando los tengas listos.
 // ---------------------------------------------------------------
-const BOOKING_URL = 'https://calendar.app.google/RnHsZPghqCm6yDuR7';
+const BOOKING_URL = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3InGBO8Qg9bq7CLzd5cB7clP44b0SAT3vQSO1Z01sr6DoWQgIxy-hzzcNPO9YRHLpQzu1kC3zU';
 const FORM_URL = 'https://forms.gle/XEZkJndrUcKw1d8c8';
 
 function MountainDivider({ tone = 'gold' }) {

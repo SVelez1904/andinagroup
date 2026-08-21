@@ -209,8 +209,8 @@
 }
 
 .ridge--gold {
-  background: #0f1420; /* El fondo de la transición de montaña ahora es el azul oscuro */
-}
+  background: #0f1420; /* El fondo de la transición de montaña ahora es el azul oscuro 
+}*/
 
 .ridge--paper polyline {
   stroke: var(--gold-300);

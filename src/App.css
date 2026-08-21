@@ -189,16 +189,19 @@
 
 /* MOUNTAIN DIVIDER */
 .ridge {
-  display: block;
+  /*display: block;*/
+  display: none;
   width: 100%;
   height: 60px;
+  background: var(--border-color, rgba(255, 255, 255, 0.08));
 }
-
+/*
 .ridge polyline {
   fill: none;
   stroke-width: 2;
   stroke-linejoin: round;
   stroke-linecap: round;
+  
 }
 
 .ridge--gold polyline {
@@ -216,7 +219,7 @@
 .ridge--paper {
   background: #0f1420;
 }
-
+*/
 /* PROCESS */
 .process {
   padding: clamp(56px, 9vw, 100px) 0;
@@ -438,5 +441,279 @@
   .whatsapp-float__icon {
     width: 28px;
     height: 28px;
+  }
+}
+
+/* ==========================================
+   SECCIÓN COMPLETA: MANUAL DE NORMATIVAS
+   ========================================== */
+.manual-section {
+  background: #0c101a;
+  padding: clamp(56px, 9vw, 100px) 0;
+  color: #f7f2e7;
+}
+
+.manual-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Encabezado */
+.manual-header {
+  max-width: 780px;
+}
+
+.manual-header__badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.badge--danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.badge--gold {
+  background: rgba(230, 200, 117, 0.1);
+  color: var(--gold-300);
+  border: 1px solid rgba(230, 200, 117, 0.3);
+}
+
+.manual-header__title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  color: #f7f2e7;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.manual-header__desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #b0bac5;
+}
+
+/* Bloques Generales */
+.manual-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.manual-block__title {
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.manual-block__title--danger { color: #f87171; }
+.manual-block__title--warning { color: var(--gold-300); }
+
+.manual-block__sub {
+  font-size: 15px;
+  color: #b0bac5;
+  margin-top: -10px;
+}
+
+/* Layout Grids */
+.manual-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.manual-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.manual-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Tarjetas */
+.manual-card {
+  background: #161f30;
+  border: 1px solid #233149;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.manual-card:hover {
+  border-color: #3c4f6b;
+}
+
+.manual-card--alert {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: linear-gradient(180deg, rgba(239, 68, 68, 0.05) 0%, #161f30 100%);
+}
+
+.manual-card--alert:hover {
+  border-color: #ef4444;
+}
+
+.manual-card--highlight {
+  border-color: rgba(230, 200, 117, 0.3);
+}
+
+.manual-card__tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f87171;
+  letter-spacing: 0.05em;
+}
+
+.manual-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f7f2e7;
+}
+
+.manual-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b0bac5;
+  margin: 0;
+}
+
+.manual-card__header-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f7f2e7;
+  margin-bottom: 8px;
+}
+
+/* Listas */
+.manual-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.manual-list li {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #b0bac5;
+  padding-left: 18px;
+  position: relative;
+}
+
+.manual-list li::before {
+  content: "•";
+  color: var(--gold-300);
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.manual-list strong {
+  color: #f7f2e7;
+}
+
+/* Checklist */
+.manual-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.manual-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.manual-checklist input[type="checkbox"] {
+  accent-color: var(--gold-300);
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.manual-checklist label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b0bac5;
+}
+
+.manual-checklist label strong {
+  color: #f7f2e7;
+}
+
+/* Stepper (Sanciones) */
+.manual-stepper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.manual-stepper__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.manual-stepper__num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #1f2d42;
+  color: var(--gold-300);
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(230, 200, 117, 0.2);
+}
+
+.manual-stepper__item strong {
+  display: block;
+  font-size: 15px;
+  color: #f7f2e7;
+  margin-bottom: 2px;
+}
+
+.manual-stepper__item p {
+  font-size: 13.5px;
+  color: #b0bac5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .manual-grid--3,
+  .manual-grid--2 {
+    grid-template-columns: 1fr;
   }
 }
